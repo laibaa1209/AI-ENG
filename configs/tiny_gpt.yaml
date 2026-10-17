@@ -1,0 +1,35 @@
+# MiniGPT baseline configuration (the model in checkpoints/tiny_gpt.pt).
+# Every key can be overridden on the command line: python -m src.train --set key=value
+
+run_name: tiny_gpt
+checkpoint_path: checkpoints/tiny_gpt.pt
+seed: 1337
+device: null          # null = cuda if available else cpu
+
+# model
+context_length: 128
+d_model: 128
+n_heads: 4
+n_layers: 4
+ffn_dim: 512          # 4 x d_model
+dropout: 0.1
+pos_encoding: sinusoidal   # sinusoidal | learned
+causal: true
+
+# data
+val_frac: 0.1         # last 10% of the corpus
+
+# optimisation
+batch_size: 32
+lr: 1.0e-3
+min_lr: 1.0e-4
+warmup_steps: 200
+max_steps: 5000
+weight_decay: 0.1
+grad_clip: 1.0
+
+# logging
+eval_interval: 250
+eval_iters: 50
+sample_prompt: "ROMEO:"
+sample_tokens: 120

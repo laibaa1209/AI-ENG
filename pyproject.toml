@@ -1,0 +1,9 @@
+[project]
+name = "minigpt-shakespeare"
+version = "1.0.0"
+description = "A small GPT-style causal language model built from scratch in PyTorch (AI Engineering assignment)"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

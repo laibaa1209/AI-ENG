@@ -1,0 +1,11 @@
+Prompt: The future of artificial intelligence
+Generated: The future of artificial intelligence
+To mock'd him against me and God, that are the holy 'Warwick,
+As the mother to descided it, and less ownricks,
+The have
+
+model parameters: 0.81M (809,984)
+context length: 128
+layers/heads/d_model: 4/4/128
+decoding: temperature=0.8 top_k=None  seed=42
+checkpoint val loss: 1.6376  (perplexity 5.143)

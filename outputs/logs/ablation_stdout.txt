@@ -1,0 +1,461 @@
+>> C:\Program Files\Python313\python.exe -m src.train --set run_name=abl_base checkpoint_path=checkpoints/abl_base.pt batch_size=16 max_steps=1000 eval_interval=100 eval_iters=20 sample_tokens=200 warmup_steps=100 n_layers=4 n_heads=4 context_length=128 pos_encoding=sinusoidal
+MiniGPT architecture
+  vocab_size      65
+  context_length  128
+  d_model         128
+  n_heads         4  (d_head = 32)
+  n_layers        4
+  ffn_dim         512
+  dropout         0.1
+  pos_encoding    sinusoidal
+
+  module                            params
+  tok_emb                            8,320
+  pos (learned only)                     0
+  blocks                           793,088
+    per block                      198,272
+  ln_f                                 256
+  lm_head                            8,320
+  TOTAL                            809,984  (0.81M)
+device=cpu  train_tokens=1,003,854  val_tokens=111,540
+step     0 | train 4.1810 | val 4.1808 | lr 1.00e-05 |    2.7s
+  sample: "ROMEO:oEVHcfqZKv?Fb,3Bd.Bo'SZ!B fLDG:Vtz,VqcGMZwmE,a-:g?\nmrESlchn!D:Pr3vQTMfLbxvh.;mA;\nnRnrjgVg$Ju:Kc?.x'OOFumSNlF.Gw.ie"
+step   100 | train 2.6128 | val 2.6182 | lr 1.00e-03 |   43.2s
+  sample: "ROMEO:\nNS\nAr ounre.\nMeverethe an or n mothenos in,\nO's\nSTfother whounde me, ther b sthe ysothant coredo hispme bpa b at "
+step   200 | train 2.4556 | val 2.4577 | lr 9.73e-04 |   91.3s
+  sample: "ROMEO:\nAnd cathit cal t thasout wend,:\nWe indeeangean t tout iivincojare ttot.\nWhive I's m s s theare co I de inos, hid "
+step   300 | train 2.3570 | val 2.3685 | lr 8.95e-04 |  137.9s
+  sample: "ROMEO:\nI the my thilly ad ack's tond se wha e wouts.\n\nORLO:\n\nMat feanst wall oiser ofe the thanist n ainelom ad mry ousa"
+step   400 | train 2.2902 | val 2.2979 | lr 7.75e-04 |  180.8s
+  sample: "ROMEO:\nSim, dof tu I par hive;\n's nontheshat ne spey drarere sthe\nDit no mas teche sthim my dedacka llow. sof thed t\nLUL"
+step   500 | train 2.2393 | val 2.2598 | lr 6.28e-04 |  224.6s
+  sample: 'ROMEO:\nMa shokisos her wind I hot dint as sthe ald al thran thid the, the the thelt my?\n\nNERONES:\nWhe te afouls save Or '
+step   600 | train 2.1924 | val 2.2090 | lr 4.72e-04 |  271.7s
+  sample: 'ROMEO:\nTin, his eve of mustr, sinds onernor:\nThan thap by huese tradurd po folls,\nTuge therr do hat than my frouse!\n\nSTA'
+step   700 | train 2.1590 | val 2.1898 | lr 3.25e-04 |  325.3s
+  sample: 'ROMEO:\nO well you hive lind.\n\nBut The nort, thad, wand me nor sat my we thers and\npise ist youg coss thint thal ist peer'
+step   800 | train 2.1341 | val 2.1636 | lr 2.05e-04 |  364.9s
+  sample: "ROMEO:\nShal fang to rart peaten far'll your to in tin?\n\nCARLALIO:\nI I il so sad che shar by.\n\nOMULER:\nMy my rouge, if aw"
+step   900 | train 2.1122 | val 2.1451 | lr 1.27e-04 |  404.5s
+  sample: 'ROMEO:\nBacak frat, harchend wink min soe,\nTon hage ont amifunkes live, id whord at.\n\nCORYOK:\nBund ain nos the sour off w'
+step  1000 | train 2.1030 | val 2.1327 | lr 1.00e-04 |  446.0s
+  sample: 'ROMEO:\nOnd the to no ore of sin corest way hith sprire?\nBut ceemar int of siris armannked,\nAnd moushe ave the sisth mand'
+{
+  "run_name": "abl_base",
+  "params": 809984,
+  "final_train_loss": 2.103,
+  "final_val_loss": 2.1327,
+  "val_perplexity": 8.438,
+  "train_time_s": 447.7,
+  "tokens_per_s": 4574,
+  "peak_mem_mb": 423.1,
+  "mem_kind": "process_peak_rss",
+  "attn_scores_mb": 16.0,
+  "hardware": "CPU Intel64 Family 6 Model 142 Stepping 12, GenuineIntel (8 threads)"
+}
+checkpoint -> C:\Laiba\Uni\7th Sem\ai eng\transformer-gpt-assignment\checkpoints/abl_base.pt
+>> C:\Program Files\Python313\python.exe -m src.train --set run_name=abl_depth2 checkpoint_path=checkpoints/abl_depth2.pt batch_size=16 max_steps=1000 eval_interval=100 eval_iters=20 sample_tokens=200 warmup_steps=100 n_layers=2 n_heads=4 context_length=128 pos_encoding=sinusoidal
+MiniGPT architecture
+  vocab_size      65
+  context_length  128
+  d_model         128
+  n_heads         4  (d_head = 32)
+  n_layers        2
+  ffn_dim         512
+  dropout         0.1
+  pos_encoding    sinusoidal
+
+  module                            params
+  tok_emb                            8,320
+  pos (learned only)                     0
+  blocks                           396,544
+    per block                      198,272
+  ln_f                                 256
+  lm_head                            8,320
+  TOTAL                            413,440  (0.41M)
+device=cpu  train_tokens=1,003,854  val_tokens=111,540
+step     0 | train 4.2159 | val 4.2154 | lr 1.00e-05 |    1.5s
+  sample: "ROMEO:\nOxmX3e?eoeeZWKvT'ch\nOf''$acBT3'BH&lt RPtLDLONS-dNoMoX\nr3iZ.eku&aexS.YgceCFQ:pD&fGcRDtnwjZgQ&upav!nyGmS\nITuGelOTjR"
+step   100 | train 2.6563 | val 2.6617 | lr 1.00e-03 |   22.4s
+  sample: 'ROMEO: s tout f me y y trthi\nFer V s pand be t he e sad y hoit, ld groue d;oulil.\n\n\nLI r, rwond s s w,\n\nT, Mhdefend Ij m'
+step   200 | train 2.4789 | val 2.4817 | lr 9.73e-04 |   44.6s
+  sample: "ROMEO: xelle thorely ayint was, lll  hoong.\nThavenor'do maruthe o MENod s isiso ang whin oustravele nd bes ou s!\nThoun t"
+step   300 | train 2.3924 | val 2.3960 | lr 8.95e-04 |   67.2s
+  sample: "ROMEO:\nBad Oug citorthine, t.\nThellong, in se ly wyouras ougural thes'l besis ler\nThand ENI I I I shell thad atofothared"
+step   400 | train 2.3432 | val 2.3523 | lr 7.75e-04 |   89.5s
+  sample: 'ROMEO:\nHed:\nTo dof bin athomal hill, dow ke t:\nAn, an hiou tis dereit hell the winsh nare\nRou:\nI y oringhil nat aress t '
+step   500 | train 2.2936 | val 2.3078 | lr 6.28e-04 |  111.9s
+  sample: 'ROMEO:\nLamit Whas I sime myy aricong m sthe bertht tedas rris vels\nThan me an.\n\nMENGEDENI:\n\nKI ad here thesimy ut hino s'
+step   600 | train 2.2648 | val 2.2841 | lr 4.72e-04 |  134.0s
+  sample: "ROMEO:\ndy, thil tho.\n\n\n\nSTurdUCOLELEm:\nNote, seelile be cot butowe tath had artite s thal gradel the ol;\nfame pee the's "
+step   700 | train 2.2410 | val 2.2586 | lr 3.25e-04 |  155.0s
+  sample: 'ROMEO:\nThie tou my the the folll--- murd o muce pit winend\nIf bus do the wat is gre it mee,\nThit, cou bay s an ais, hend'
+step   800 | train 2.2200 | val 2.2415 | lr 2.05e-04 |  175.7s
+  sample: 'ROMEO:\nPrerres my pof vein lom:\nHis thar he mepe fante, Won dere heno liger non\nI fint tig ghou he hath han to o whive o'
+step   900 | train 2.2138 | val 2.2357 | lr 1.27e-04 |  196.3s
+  sample: 'ROMEO:\nThon the he thoty home fe she eeve?\n\nWAG VINIS:\nThe noke tou yo dat the thaies arm whert hitrd\nBue he hese the co'
+step  1000 | train 2.2056 | val 2.2290 | lr 1.00e-04 |  220.0s
+  sample: "ROMEO:\nBooto Lould ueaul'd wat and Edist war nomegh.\nTo I tha'd thar and sild the lo knoteaj\nRir wath llor tou noy whe g"
+{
+  "run_name": "abl_depth2",
+  "params": 413440,
+  "final_train_loss": 2.2056,
+  "final_val_loss": 2.229,
+  "val_perplexity": 9.291,
+  "train_time_s": 221.3,
+  "tokens_per_s": 9255,
+  "peak_mem_mb": 365.7,
+  "mem_kind": "process_peak_rss",
+  "attn_scores_mb": 8.0,
+  "hardware": "CPU Intel64 Family 6 Model 142 Stepping 12, GenuineIntel (8 threads)"
+}
+checkpoint -> C:\Laiba\Uni\7th Sem\ai eng\transformer-gpt-assignment\checkpoints/abl_depth2.pt
+>> C:\Program Files\Python313\python.exe -m src.train --set run_name=abl_depth6 checkpoint_path=checkpoints/abl_depth6.pt batch_size=16 max_steps=1000 eval_interval=100 eval_iters=20 sample_tokens=200 warmup_steps=100 n_layers=6 n_heads=4 context_length=128 pos_encoding=sinusoidal
+MiniGPT architecture
+  vocab_size      65
+  context_length  128
+  d_model         128
+  n_heads         4  (d_head = 32)
+  n_layers        6
+  ffn_dim         512
+  dropout         0.1
+  pos_encoding    sinusoidal
+
+  module                            params
+  tok_emb                            8,320
+  pos (learned only)                     0
+  blocks                         1,189,632
+    per block                      198,272
+  ln_f                                 256
+  lm_head                            8,320
+  TOTAL                          1,206,528  (1.21M)
+device=cpu  train_tokens=1,003,854  val_tokens=111,540
+step     0 | train 4.2036 | val 4.2030 | lr 1.00e-05 |    5.5s
+  sample: "ROMEO:Jt'IvQc$jWtGlFFICon3y- HpZBeGcH.RkEqRuFxwQ-jmQmerX'isZNSeRuYc\nz:draf;SG!! VXzYevUl,ltPYYuYEnA!R dUqMH$D,EyLRpSX?ya"
+step   100 | train 2.6085 | val 2.6087 | lr 1.00e-03 |   87.9s
+  sample: 'ROMEO:\nM mang iyitofr mscot wonow omeresale w\nNTUE,\nAANWhat de.\nCSovw pon\nTllyou.\nZC\nS:\nNI nof Ban s by y s are fNotofo,'
+step   200 | train 2.4553 | val 2.4469 | lr 9.73e-04 |  159.2s
+  sample: 'ROMEO:\nTI thaveis n.\n\nrerad RENLUIORIUCIZin f harard.\nIngeses ar bere-ARobch besen be mende, yowered we n ve bul\nWhe han'
+step   300 | train 2.3455 | val 2.3503 | lr 8.95e-04 |  217.8s
+  sample: 'ROMEO:\nHamet mere shis o then,\nI out nout no hilar cau hanth, chour:\nDin d faror saghy than sthe m.\n\n\n\nFOUGO:\nTheall tha'
+step   400 | train 2.2620 | val 2.2748 | lr 7.75e-04 |  275.5s
+  sample: 'ROMEO:\nAnct po whabe by there fin the the pro Fo be asemy low he\nmade fom his thy dis hy ort the ithich ghif\nYonghe he m'
+step   500 | train 2.2108 | val 2.2251 | lr 6.28e-04 |  336.4s
+  sample: 'ROMEO:\nBy, yichog canght be crenourccin.\n\nBUSUNIN:\nBioghsen\nWhe he yog ue the charn thid e hes bis?\n\nAUCUDUE:\nS:\nIFe I e'
+step   600 | train 2.1602 | val 2.1925 | lr 4.72e-04 |  400.9s
+  sample: "ROMEO:\nThe sin to you my tould taree soen thad\nAnlas ich non theie alir my hour hecoures'ds nof brar,\nShe eauve ad shome"
+step   700 | train 2.1210 | val 2.1549 | lr 3.25e-04 |  468.6s
+  sample: 'ROMEO:\nWhan and ad shy thands prove be ale:\nAnd my, bugly owar my ith storke the int.\nCANIO:\n\nProtit anourse, to he as m'
+step   800 | train 2.0945 | val 2.1322 | lr 2.05e-04 |  534.9s
+  sample: "ROMEO:\nI, pe hour an'd blin frathe thie hou bot come\nIn isis sto brousit ciffon's to he mararty;\nBur a and held pave pas"
+step   900 | train 2.0721 | val 2.1162 | lr 1.27e-04 |  599.5s
+  sample: 'ROMEO:\nMy cowe. End you the I Cambles on I thee\nThou dereme well with stou shant heat mat;\nHad arulp thou andl aurdine h'
+step  1000 | train 2.0597 | val 2.1048 | lr 1.00e-04 |  663.9s
+  sample: 'ROMEO:\nI the wowd thelfour the knou a\nThit blim dong things to ben of beest my wheathby\nthe sou muchincente comy.\n\nCESTI'
+{
+  "run_name": "abl_depth6",
+  "params": 1206528,
+  "final_train_loss": 2.0597,
+  "final_val_loss": 2.1048,
+  "val_perplexity": 8.205,
+  "train_time_s": 666.4,
+  "tokens_per_s": 3073,
+  "peak_mem_mb": 480.1,
+  "mem_kind": "process_peak_rss",
+  "attn_scores_mb": 24.0,
+  "hardware": "CPU Intel64 Family 6 Model 142 Stepping 12, GenuineIntel (8 threads)"
+}
+checkpoint -> C:\Laiba\Uni\7th Sem\ai eng\transformer-gpt-assignment\checkpoints/abl_depth6.pt
+>> C:\Program Files\Python313\python.exe -m src.train --set run_name=abl_heads2 checkpoint_path=checkpoints/abl_heads2.pt batch_size=16 max_steps=1000 eval_interval=100 eval_iters=20 sample_tokens=200 warmup_steps=100 n_layers=4 n_heads=2 context_length=128 pos_encoding=sinusoidal
+MiniGPT architecture
+  vocab_size      65
+  context_length  128
+  d_model         128
+  n_heads         2  (d_head = 64)
+  n_layers        4
+  ffn_dim         512
+  dropout         0.1
+  pos_encoding    sinusoidal
+
+  module                            params
+  tok_emb                            8,320
+  pos (learned only)                     0
+  blocks                           793,088
+    per block                      198,272
+  ln_f                                 256
+  lm_head                            8,320
+  TOTAL                            809,984  (0.81M)
+device=cpu  train_tokens=1,003,854  val_tokens=111,540
+step     0 | train 4.1810 | val 4.1808 | lr 1.00e-05 |    3.0s
+  sample: "ROMEO:oEVHcfqZKv?Fb,3Bd.Bo'SZ!B fLDG:Vtz,VqcGMZwmE,a-:g?\nmrESlchn!D:Pr3vQTMfLbxvh.;mA;\nnRnrjgVg$Ju:Kc?.x'OOFumSNlF.Gw.ie"
+step   100 | train 2.6136 | val 2.6179 | lr 1.00e-03 |   46.0s
+  sample: "ROMEO:\nNS\nAr ounre.\nMeverethe an or n mothenos in,\nO's\nSTfother whounde me,\nGore b sthe ysothent coredo hispme bpa b at "
+step   200 | train 2.4610 | val 2.4603 | lr 9.73e-04 |   87.4s
+  sample: 'ROMEO:\nAnd cathind al hathasout wen\nT:\nWe indeeangean t athe iivincojare ttothisk he houd t ds thear ico ted winos, hid '
+step   300 | train 2.3549 | val 2.3618 | lr 8.95e-04 |  129.7s
+  sample: 'ROMEO:\nI the my thilly ade hat whend se wha e wouts.\n\nOOLOLINMEKLEEKE:\nSe I poiser ofe the thanist n ainelom ad mry ousa'
+step   400 | train 2.2837 | val 2.2917 | lr 7.75e-04 |  179.1s
+  sample: "ROMEO:\nSint dof tu I paran gean's nontheshad an spey,\nAngere sorerest no mas teche st.\n\n\nIWICES:\nTa lyowe sof thed thid "
+step   500 | train 2.2333 | val 2.2504 | lr 6.28e-04 |  225.0s
+  sample: 'ROMEO:\nMa shokisos her wind Ifrot din nos sho wald wam,\nFre thid the, the the the the ust gomaf,\nTand te afound save Of '
+step   600 | train 2.1955 | val 2.2102 | lr 4.72e-04 |  264.6s
+  sample: 'ROMEO:\nThals lene to ine and, sinds onernor:\nThan thar by huese sthaurd po folls,\nTuge therr do haty the my frouse thaca'
+step   700 | train 2.1628 | val 2.1911 | lr 3.25e-04 |  303.0s
+  sample: 'ROMEO:\nHene lon jun veme ad.\n\nBut wheange amers the to mere great arste there and pise;\nSaty pof has thint thalins the o'
+step   800 | train 2.1414 | val 2.1702 | lr 2.05e-04 |  343.2s
+  sample: "ROMEO:\nShal fang to rard peaten far'd the a to in tis?\n\nCARLALIO:\nI I il wite pach weth here fran's knot.\n\nUES:\nI til sw"
+step   900 | train 2.1283 | val 2.1603 | lr 1.27e-04 |  383.0s
+  sample: 'ROMEO:\nBacak frat, harche phe hows for eardind and\nWhe amicunkes ling, id whot: at sthe the then\nThing the at so bexef w'
+step  1000 | train 2.1180 | val 2.1485 | lr 1.00e-04 |  420.8s
+  sample: 'ROMEO:\nHou to pean, jore ondsin cowes I lothir as\nOf thelle ceemer int of siris as annd spreten.\nQUEN EES:\nAcull, to no '
+{
+  "run_name": "abl_heads2",
+  "params": 809984,
+  "final_train_loss": 2.118,
+  "final_val_loss": 2.1485,
+  "val_perplexity": 8.572,
+  "train_time_s": 422.5,
+  "tokens_per_s": 4848,
+  "peak_mem_mb": 422.0,
+  "mem_kind": "process_peak_rss",
+  "attn_scores_mb": 8.0,
+  "hardware": "CPU Intel64 Family 6 Model 142 Stepping 12, GenuineIntel (8 threads)"
+}
+checkpoint -> C:\Laiba\Uni\7th Sem\ai eng\transformer-gpt-assignment\checkpoints/abl_heads2.pt
+>> C:\Program Files\Python313\python.exe -m src.train --set run_name=abl_heads8 checkpoint_path=checkpoints/abl_heads8.pt batch_size=16 max_steps=1000 eval_interval=100 eval_iters=20 sample_tokens=200 warmup_steps=100 n_layers=4 n_heads=8 context_length=128 pos_encoding=sinusoidal
+MiniGPT architecture
+  vocab_size      65
+  context_length  128
+  d_model         128
+  n_heads         8  (d_head = 16)
+  n_layers        4
+  ffn_dim         512
+  dropout         0.1
+  pos_encoding    sinusoidal
+
+  module                            params
+  tok_emb                            8,320
+  pos (learned only)                     0
+  blocks                           793,088
+    per block                      198,272
+  ln_f                                 256
+  lm_head                            8,320
+  TOTAL                            809,984  (0.81M)
+device=cpu  train_tokens=1,003,854  val_tokens=111,540
+step     0 | train 4.1810 | val 4.1808 | lr 1.00e-05 |    3.8s
+  sample: "ROMEO:oEVHcfqZKv?Fb,3Bd.Bo'SZ!B fLDG:Vtz,VqcGMZwmE,a-:g?\nmrESlchn!D:Pr3vQTMfLbxvh.;mA;\nnRnrjgVg$Ju:Kc?.x'OOFumSNlF.Gw.ie"
+step   100 | train 2.6128 | val 2.6188 | lr 1.00e-03 |   49.1s
+  sample: "ROMEO:\nNS\nAr ounre.\nMeverethe an or n mothenos in,\nO's\nSTfother whounde me, ther b sthe ysothant cord b hispmenes in at "
+step   200 | train 2.4665 | val 2.4734 | lr 9.73e-04 |   94.3s
+  sample: 'ROMEO:\nAnd cat, to al hathesou urd me:\nWe indeeangean t athe iivincojare ttot.\nWhive houd is s thear ico I d Angos, hid '
+step   300 | train 2.3526 | val 2.3647 | lr 8.95e-04 |  140.9s
+  sample: 'ROMEO:\nI ere my thilly ade hat whend seenga e wouts.\n\nOOLOLIEMEKLIE:\n\nThe I poiger ofe the thanist n ainelom ad my,\nMara'
+step   400 | train 2.2772 | val 2.2865 | lr 7.75e-04 |  184.9s
+  sample: "ROMEO:\nSim, dof tu I par hive;\n's nond thard an spey drarere sthe\nAst no mas teche sthim me dedacka llof.\n\nTORRCUCHES:\nI"
+step   500 | train 2.2360 | val 2.2549 | lr 6.28e-04 |  228.5s
+  sample: 'ROMEO:\nMa schaysos her wind I hot dint as shif;\n\nFCEEENM:\nAnthid the, the the the the ust gom, grannd te afouns save.\n\nP'
+step   600 | train 2.1912 | val 2.2084 | lr 4.72e-04 |  276.6s
+  sample: 'ROMEO:\nTind his eve of mustr, sinds onernor: mean thar\nTho uef giredurd pon sprard ugeticerr dony.\n\nBORY IENETO:\nWhe win'
+step   700 | train 2.1598 | val 2.1903 | lr 3.25e-04 |  323.2s
+  sample: 'ROMEO:\nHe eal you hive, fod. I frem fangrt, thad,\nThat me nor sat my we therspand pise is:\nSist shas thint thay is the o'
+step   800 | train 2.1377 | val 2.1669 | lr 2.05e-04 |  368.3s
+  sample: "ROMEO:\nShal fang to rirt peaten far'll your to in the?\n\nCAULALIO:\nI I il with pach weth here fran's knot.\n\nUESSTIUS:\nTaw"
+step   900 | train 2.1211 | val 2.1568 | lr 1.27e-04 |  413.2s
+  sample: 'ROMEO:\nBacak frat, harchend win will gomand arangend\nThamicu bout bert id win dist.\n\nCORIUK:\nBunthain non hat sous anf w'
+step  1000 | train 2.1118 | val 2.1430 | lr 1.00e-04 |  463.7s
+  sample: 'ROMEO:\nHAn the then jore omasin copest way hith sprire?\nButiceser:\nThe o searin as annd spinten. I\n\nFLOES:\nAche wit mand'
+{
+  "run_name": "abl_heads8",
+  "params": 809984,
+  "final_train_loss": 2.1118,
+  "final_val_loss": 2.143,
+  "val_perplexity": 8.525,
+  "train_time_s": 465.7,
+  "tokens_per_s": 4398,
+  "peak_mem_mb": 452.9,
+  "mem_kind": "process_peak_rss",
+  "attn_scores_mb": 32.0,
+  "hardware": "CPU Intel64 Family 6 Model 142 Stepping 12, GenuineIntel (8 threads)"
+}
+checkpoint -> C:\Laiba\Uni\7th Sem\ai eng\transformer-gpt-assignment\checkpoints/abl_heads8.pt
+>> C:\Program Files\Python313\python.exe -m src.train --set run_name=abl_ctx64 checkpoint_path=checkpoints/abl_ctx64.pt batch_size=16 max_steps=1000 eval_interval=100 eval_iters=20 sample_tokens=200 warmup_steps=100 n_layers=4 n_heads=4 context_length=64 pos_encoding=sinusoidal
+MiniGPT architecture
+  vocab_size      65
+  context_length  64
+  d_model         128
+  n_heads         4  (d_head = 32)
+  n_layers        4
+  ffn_dim         512
+  dropout         0.1
+  pos_encoding    sinusoidal
+
+  module                            params
+  tok_emb                            8,320
+  pos (learned only)                     0
+  blocks                           793,088
+    per block                      198,272
+  ln_f                                 256
+  lm_head                            8,320
+  TOTAL                            809,984  (0.81M)
+device=cpu  train_tokens=1,003,854  val_tokens=111,540
+step     0 | train 4.1925 | val 4.1895 | lr 1.00e-05 |    1.3s
+  sample: "ROMEO:oEVHcfqZKv?Fb,3Bd.Bo'SZ!B fLDG:Vtz,VqcGMZwmE,a-:g?\nmrESlchn!D:Pr3vQTMfLbxvh.;mA;\nnRnrjgVc$Ju:KcDYx'OOFumSNl;jGw.ie"
+step   100 | train 2.6393 | val 2.6378 | lr 1.00e-03 |   21.5s
+  sample: "ROMEO:\nNRHENC ty bere thath wetalouther t.\nAt whase was sapy I waraofedod he honoonong s 'thed id thieave ous bt foo the"
+step   200 | train 2.4451 | val 2.4360 | lr 9.73e-04 |   42.6s
+  sample: "ROMEO:\nNort we wo's be cue m ses uteand this us,\n\nHKEETTHEN I:\nGsthe mhee ainerind t,\nDos t ce wis ke glakeng thend ires"
+step   300 | train 2.3331 | val 2.3264 | lr 8.95e-04 |   63.1s
+  sample: "ROMEO:\n\nThary sony hapand, isth tam me geeve'ind aly wis isth harlow\nWhatrs hadeat hatelllsher I llonllll! padithe wid,\n"
+step   400 | train 2.2739 | val 2.2701 | lr 7.75e-04 |   84.1s
+  sample: "ROMEO:\nWhis cor'd or thar yast thave sther--my,\nThouis co sand, asof fathed atonive hin.\n\n\nThingh HAET:\nShellil thom hem"
+step   500 | train 2.2232 | val 2.2174 | lr 6.28e-04 |  105.5s
+  sample: 'ROMEO:\nI ethe wo no blor sis for mis ar gows wencect.\n\nOKINNA.\n\nSIORDO:\nOulllle, and mond now I shave Dow I\nSea aredrder'
+step   600 | train 2.1720 | val 2.1845 | lr 4.72e-04 |  127.0s
+  sample: 'ROMEO:\nAnd I hat that thinghe nis the shear?\nShy I my you-dene, hour imus an ton wist thou\nAntis mestust, ancend wing li'
+step   700 | train 2.1460 | val 2.1566 | lr 3.25e-04 |  147.1s
+  sample: 'ROMEO:\nAnt ante ish mor, thy me sight medow soutn can mak shers\nAnd ond prece doneds gut noth wis, preaings not the\nAnd '
+step   800 | train 2.1184 | val 2.1339 | lr 2.05e-04 |  166.7s
+  sample: 'ROMEO:\nDow but to prese, yor ave, kith ford wars our,\nYou wil cof and the be he prome,\nToth Roth my sour her mer, so the'
+step   900 | train 2.1000 | val 2.1151 | lr 1.27e-04 |  186.9s
+  sample: 'ROMEO:\nI wamet; gownd Mit vand thich cat the the to des\nAnd to atht thind hand ling athe the mat.\n\n\nBOSAR;\nBEENRW:\nFor l'
+step  1000 | train 2.0904 | val 2.1070 | lr 1.00e-04 |  207.8s
+  sample: 'ROMEO:\nAnd and to ser tate wil the is yours beate sis the bue.\n\n\nGAURD:\nPUMy, Ad t hay geat the phe alet sto I to you,\nB'
+{
+  "run_name": "abl_ctx64",
+  "params": 809984,
+  "final_train_loss": 2.0904,
+  "final_val_loss": 2.107,
+  "val_perplexity": 8.224,
+  "train_time_s": 209.3,
+  "tokens_per_s": 4892,
+  "peak_mem_mb": 376.2,
+  "mem_kind": "process_peak_rss",
+  "attn_scores_mb": 4.0,
+  "hardware": "CPU Intel64 Family 6 Model 142 Stepping 12, GenuineIntel (8 threads)"
+}
+checkpoint -> C:\Laiba\Uni\7th Sem\ai eng\transformer-gpt-assignment\checkpoints/abl_ctx64.pt
+>> C:\Program Files\Python313\python.exe -m src.train --set run_name=abl_ctx256 checkpoint_path=checkpoints/abl_ctx256.pt batch_size=16 max_steps=1000 eval_interval=100 eval_iters=20 sample_tokens=200 warmup_steps=100 n_layers=4 n_heads=4 context_length=256 pos_encoding=sinusoidal
+MiniGPT architecture
+  vocab_size      65
+  context_length  256
+  d_model         128
+  n_heads         4  (d_head = 32)
+  n_layers        4
+  ffn_dim         512
+  dropout         0.1
+  pos_encoding    sinusoidal
+
+  module                            params
+  tok_emb                            8,320
+  pos (learned only)                     0
+  blocks                           793,088
+    per block                      198,272
+  ln_f                                 256
+  lm_head                            8,320
+  TOTAL                            809,984  (0.81M)
+device=cpu  train_tokens=1,003,854  val_tokens=111,540
+step     0 | train 4.1908 | val 4.1889 | lr 1.00e-05 |    8.7s
+  sample: "ROMEO:oEVHcfqZKv?Fb,3Bd.Bo'SZ!B fLDG:Vtz,VqcGMZwmE,a-:g?\nmrESlchn!D:Pr3vQTMfLbxvh.;mA;\nnRnrjgVg$Ju:Kc?.x'OOFumSNlF.Gw.ie"
+step   100 | train 2.6124 | val 2.6176 | lr 1.00e-03 |   93.8s
+  sample: 'ROMEO:\n\nTh,\nTDThes bmy the\n\nAO:\nANEAr f nghy p y he ikDR:IFo as lt comas athanand u toreulllld d owil is ant yiupe the m'
+step   200 | train 2.4794 | val 2.4966 | lr 9.73e-04 |  175.1s
+  sample: "ROMEO:\nWhome omofris owhes me an bun, wo itis hestut 'de thore Is thar me thisthens o ourg o Rarthessthaly thacerfind ma"
+step   300 | train 2.4147 | val 2.4352 | lr 8.95e-04 |  257.8s
+  sample: 'ROMEO:\nAh omars ice s vith was be hy roir byothe,\nThe bloow s mur t wopeitoucutil h t:\niver her I t ha aitad co ait fave'
+step   400 | train 2.3345 | val 2.3652 | lr 7.75e-04 |  340.1s
+  sample: "ROMEO:\nThe you tat a give s dat widl!\nI RKE:\nThis lld I gpeaved fom Bund Lors lite wint I 'ses led?\nNGININCEN's INLI:\nTh"
+step   500 | train 2.2802 | val 2.3184 | lr 6.28e-04 |  421.1s
+  sample: 'ROMEO: at bat thanes memen an sthat mells s aterar fortin by,\nYeamet car het aly spoff somuel sombe be the\nHavencontid p'
+step   600 | train 2.2303 | val 2.2711 | lr 4.72e-04 |  501.8s
+  sample: 'ROMEO:\nWhe syolling an blarise, wowongu my thicath jussth, fantht hit grund my\nThe sith whe by lom froice.\n\nSer:\nPlis wi'
+step   700 | train 2.1973 | val 2.2450 | lr 3.25e-04 |  581.9s
+  sample: 'ROMEO: bicke ame.\n\nWhe Hand But now eaker wot ind thin, souled beenf hal.\nAnd shershap pat Vefrd fancke ste bland wil dr'
+step   800 | train 2.1788 | val 2.2282 | lr 2.05e-04 |  662.0s
+  sample: 'ROMEO:\nWho bileffe the won all sean the ugl lee it theats.\n\nATINIA:\nI the then our hanth ite opild noler ancked are an i'
+step   900 | train 2.1610 | val 2.2133 | lr 1.27e-04 |  744.3s
+  sample: 'ROMEO:\nRWan disor the we hecaid noineds omert len ery\nNostou, beeiaind fo yourll hous cor nollle;\nGow has ave so dor foo'
+step  1000 | train 2.1533 | val 2.2073 | lr 1.00e-04 |  825.9s
+  sample: "ROMEO:\nI'd, the ath emertin at amy whe lind this than age;\nFou thind elaty me co anderve end my thanked wior,\nSow bak te"
+{
+  "run_name": "abl_ctx256",
+  "params": 809984,
+  "final_train_loss": 2.1533,
+  "final_val_loss": 2.2073,
+  "val_perplexity": 9.091,
+  "train_time_s": 827.7,
+  "tokens_per_s": 4948,
+  "peak_mem_mb": 626.1,
+  "mem_kind": "process_peak_rss",
+  "attn_scores_mb": 64.0,
+  "hardware": "CPU Intel64 Family 6 Model 142 Stepping 12, GenuineIntel (8 threads)"
+}
+checkpoint -> C:\Laiba\Uni\7th Sem\ai eng\transformer-gpt-assignment\checkpoints/abl_ctx256.pt
+>> C:\Program Files\Python313\python.exe -m src.train --set run_name=abl_pos_learned checkpoint_path=checkpoints/abl_pos_learned.pt batch_size=16 max_steps=1000 eval_interval=100 eval_iters=20 sample_tokens=200 warmup_steps=100 n_layers=4 n_heads=4 context_length=128 pos_encoding=learned
+MiniGPT architecture
+  vocab_size      65
+  context_length  128
+  d_model         128
+  n_heads         4  (d_head = 32)
+  n_layers        4
+  ffn_dim         512
+  dropout         0.1
+  pos_encoding    learned
+
+  module                            params
+  tok_emb                            8,320
+  pos (learned only)                16,384
+  blocks                           793,088
+    per block                      198,272
+  ln_f                                 256
+  lm_head                            8,320
+  TOTAL                            826,368  (0.83M)
+device=cpu  train_tokens=1,003,854  val_tokens=111,540
+step     0 | train 4.1982 | val 4.1958 | lr 1.00e-05 |    3.4s
+  sample: 'ROMEO:Adj:rPax:DveLFhXfYerkAnOrqeDyvMnns;ULxgLN&EAB,ynDB: ?kXavNwTV:wIQsVArV-gpX.i:cmW HRjt?ByKvEjoQRjxfGi V,& ?pYacxwcC'
+step   100 | train 2.6942 | val 2.7010 | lr 1.00e-03 |   43.7s
+  sample: 'ROMEO:\nOu sethet cngfd, nok me d s.\n.Sfyend arl b thamrivers theould hath ar site t e me n m f sou;af tKnd g theeng te s'
+step   200 | train 2.5026 | val 2.5020 | lr 9.73e-04 |   82.2s
+  sample: 'ROMEO:\nThe d tell foute CENI cay s, seweas pean y tove ithe pawint the athe.\nI sithe RI an gpoutheedinowe de, therd de t'
+step   300 | train 2.4455 | val 2.4524 | lr 8.95e-04 |  122.5s
+  sample: 'ROMEO:\nPowo be I heaves atere hath shinackst t fod k mirest mowitis a puldens athend t dowssthith ce ngh the ld t,\nTind!'
+step   400 | train 2.4078 | val 2.4184 | lr 7.75e-04 |  165.3s
+  sample: 'ROMEO:\nLot mareve me bemyof hanonsut t winve celor,\nBund ocon this fe s ghir m, horobelmands men,\nSin thins winy thounos'
+step   500 | train 2.3401 | val 2.3536 | lr 6.28e-04 |  204.3s
+  sample: 'ROMEO:\nHay, naimn wit, cann couthe thoreke my\nIthind ake eppe latorou.\n\n\nPim: le and sthathe yonn ar dor wave sst wisy, '
+step   600 | train 2.2925 | val 2.3121 | lr 4.72e-04 |  243.9s
+  sample: 'ROMEO:\nShy, lit\nAsind mabrld aket hea win, thinpen cjubl so methe,\nEth y I mead at coth yomy the wo the mang toby thamn '
+step   700 | train 2.2589 | val 2.2727 | lr 3.25e-04 |  282.9s
+  sample: 'ROMEO:\nThar is inche ting pleake fave, nor suge beit thefant.\n\nMES:\nAs nde cos te ayoy wind thal me I\nGre thay ran noore'
+step   800 | train 2.2398 | val 2.2561 | lr 2.05e-04 |  321.4s
+  sample: 'ROMEO:\nSave frougse mar whou that the thele las yor there wha me this;\nAnd lo at it itit nort, wou ile be ankne\nWhins th'
+step   900 | train 2.2283 | val 2.2432 | lr 1.27e-04 |  360.3s
+  sample: "ROMEO:\nThind ow ad this deer fome woule, day no tandt pat blage.\nMUpong I'd I wou so one surf so stous isid ulsed gue qu"
+step  1000 | train 2.2178 | val 2.2358 | lr 1.00e-04 |  400.4s
+  sample: 'ROMEO:\nAif thee mid thewinnth, tharveare wip she wal ge blan\nAnd tou co fo thit gope noucest: whive tre\nUs tourd tho rer'
+{
+  "run_name": "abl_pos_learned",
+  "params": 826368,
+  "final_train_loss": 2.2178,
+  "final_val_loss": 2.2358,
+  "val_perplexity": 9.354,
+  "train_time_s": 402.2,
+  "tokens_per_s": 5092,
+  "peak_mem_mb": 420.9,
+  "mem_kind": "process_peak_rss",
+  "attn_scores_mb": 16.0,
+  "hardware": "CPU Intel64 Family 6 Model 142 Stepping 12, GenuineIntel (8 threads)"
+}
+checkpoint -> C:\Laiba\Uni\7th Sem\ai eng\transformer-gpt-assignment\checkpoints/abl_pos_learned.pt
+| Experiment | Setting | Params | Train loss | Val loss | Val PPL | Train time (s) | Tokens/s | Peak RSS (MB) | Attn-score mem (MB) |
+|---|---|---|---|---|---|---|---|---|---|
+| Depth (n_layers) | n_layers=2 | 413,440 | 2.2056 | 2.2290 | 9.29 | 221 | 9,255 | 366 | 8.0 |
+| Depth (n_layers) | n_layers=4 | 809,984 | 2.1030 | 2.1327 | 8.44 | 448 | 4,574 | 423 | 16.0 |
+| Depth (n_layers) | n_layers=6 | 1,206,528 | 2.0597 | 2.1048 | 8.21 | 666 | 3,073 | 480 | 24.0 |
+| Heads (n_heads) | n_heads=2 | 809,984 | 2.1180 | 2.1485 | 8.57 | 422 | 4,848 | 422 | 8.0 |
+| Heads (n_heads) | n_heads=4 | 809,984 | 2.1030 | 2.1327 | 8.44 | 448 | 4,574 | 423 | 16.0 |
+| Heads (n_heads) | n_heads=8 | 809,984 | 2.1118 | 2.1430 | 8.53 | 466 | 4,398 | 453 | 32.0 |
+| Context length | context_length=64 | 809,984 | 2.0904 | 2.1070 | 8.22 | 209 | 4,892 | 376 | 4.0 |
+| Context length | context_length=128 | 809,984 | 2.1030 | 2.1327 | 8.44 | 448 | 4,574 | 423 | 16.0 |
+| Context length | context_length=256 | 809,984 | 2.1533 | 2.2073 | 9.09 | 828 | 4,948 | 626 | 64.0 |
+| Position method | pos_encoding=sinusoidal | 809,984 | 2.1030 | 2.1327 | 8.44 | 448 | 4,574 | 423 | 16.0 |
+| Position method | pos_encoding=learned | 826,368 | 2.2178 | 2.2358 | 9.35 | 402 | 5,092 | 421 | 16.0 |

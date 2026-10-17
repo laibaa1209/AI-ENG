@@ -1,0 +1,11 @@
+Same tiny Transformer (2 layers, d_model 64, 600 steps); only mask + objective differ.
+
+model mask           objective                train loss (own obj.)    next-token loss @ last pos (val)
+GPT   causal         next token, all pos.                     2.046                               2.074
+LEAK  bidirectional  next token, all pos.                     0.052                               2.630
+BERT  bidirectional  15% masked tokens                        2.946        n/a (not a next-token model)
+
+uniform-guess loss = ln(65) = 4.174
+
+GPT  sample: 'ROMEO:\nThy mome kis henll iforce neamanty id I the fart\nI hat you for beare hast of ble is is seneer, the.\n\nBUKING Will weay c'
+LEAK sample: 'ROMEO::: O::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::'

@@ -1,0 +1,35 @@
+token ids                   (2, 16)  (B, T)
+token embedding             (2, 16, 128)  (B, T, d_model)
++ sinusoidal position       (2, 16, 128)
+--- block 0 / multi-head attention ---
+input x                     (2, 16, 128)  (B, T, d_model)
+Q, K, V projections         (2, 16, 128) each
+split heads                 (2, 4, 16, 32)  (B, h, T, d_head)
+scores / weights per head   (2, 4, 16, 16)  (B, h, T, T)
+per-head output             (2, 4, 16, 32)  (B, h, T, d_head)
+merge (concat) heads        (2, 16, 128)  (B, T, h*d_head)
+output projection W_O       (2, 16, 128)  (B, T, d_model)
+--- after all blocks ---
+logits                      (2, 16, 65)  (B, T, vocab)
+
+n_heads=4, d_head=32: each head attends in its own 32-dim subspace,
+then 4 x 32 = 128 features are concatenated and mixed by W_O.
+
+MiniGPT architecture
+  vocab_size      65
+  context_length  128
+  d_model         128
+  n_heads         4  (d_head = 32)
+  n_layers        4
+  ffn_dim         512
+  dropout         0.1
+  pos_encoding    sinusoidal
+
+  module                            params
+  tok_emb                            8,320
+  pos (learned only)                     0
+  blocks                           793,088
+    per block                      198,272
+  ln_f                                 256
+  lm_head                            8,320
+  TOTAL                            809,984  (0.81M)

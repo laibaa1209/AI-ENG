@@ -1,0 +1,5 @@
+# Serving only (torch is installed separately as the CPU wheel, see render.yaml)
+fastapi>=0.110
+uvicorn>=0.29
+pyyaml>=6.0
+numpy>=1.26

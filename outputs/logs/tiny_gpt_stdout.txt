@@ -1,0 +1,76 @@
+MiniGPT architecture
+  vocab_size      65
+  context_length  128
+  d_model         128
+  n_heads         4  (d_head = 32)
+  n_layers        4
+  ffn_dim         512
+  dropout         0.1
+  pos_encoding    sinusoidal
+
+  module                            params
+  tok_emb                            8,320
+  pos (learned only)                     0
+  blocks                           793,088
+    per block                      198,272
+  ln_f                                 256
+  lm_head                            8,320
+  TOTAL                            809,984  (0.81M)
+device=cpu  train_tokens=1,003,854  val_tokens=111,540
+step     0 | train 4.1817 | val 4.1820 | lr 5.00e-06 |   14.8s
+  sample: "ROMEO:oEVHcfqZKv?Fb,3Bd.Bo'SZ!B fLDG:Vtz,VqcGMZwmE,a-:g?\nmrESlchn!D:Pr3vQTMfLbxvh.;mA;\nnRnrjgVg$Ju:Kc?.x'OOFumSNlF.Gw.ie"
+step   250 | train 2.4071 | val 2.4154 | lr 1.00e-03 |  196.6s
+  sample: "ROMEO:\nCAs he theat ilus nthee ame wich dicess minde,\nTh ons shers thind ais ustind grimus.\nJ:\n\nO, nthit ivou, kery nd's"
+step   500 | train 2.1829 | val 2.2092 | lr 9.91e-04 |  377.7s
+  sample: "ROMEO:\nWe with the fak do damedsth the whausith,\nHatirm's aked fore leacer wid,\nOn ind the we wiver a ald brorew.\n\nYSite"
+step   750 | train 1.9960 | val 2.0676 | lr 9.71e-04 |  555.8s
+  sample: "ROMEO:\nNore you bede thou ill's cand is stage for\nNoreath sos beaving umong it int.\n\nKING RIVINGII:\nHe the spol lunces, "
+step  1000 | train 1.8728 | val 1.9736 | lr 9.40e-04 |  736.7s
+  sample: 'ROMEO:\nI and the my duke and the his ween me soin.\n\nCABIO:\nWhith is is the stake, the with with wendlus.\n\nPAURD:\nMorde a'
+step  1250 | train 1.7744 | val 1.9167 | lr 8.98e-04 |  917.5s
+  sample: 'ROMEO:\nNo, they let his to ears with unto deatht;\nThou know that deed of the stanced fir the cacue,\nBy from Grons; that '
+step  1500 | train 1.7126 | val 1.8615 | lr 8.47e-04 | 1094.9s
+  sample: 'ROMEO:\nAy, and broth, may heartubs the peatechs;\nBe reven hath one; beasth in your do you.\n\nRICHARD:\nWell, be well waste'
+step  1750 | train 1.6576 | val 1.8130 | lr 7.88e-04 | 1271.7s
+  sample: 'ROMEO:\nRathis the his love sir, my been impelus.\n\nDUKE VINCENTIO:\nWe god me in I have she should us and it\nShould peer a'
+step  2000 | train 1.6178 | val 1.7904 | lr 7.22e-04 | 1448.5s
+  sample: 'ROMEO:\nNay or have hearth of my sway, gonentle to man\nI rostught yoursets show whill so will a should\nLord Edwards of Ba'
+step  2250 | train 1.5882 | val 1.7642 | lr 6.52e-04 | 1629.4s
+  sample: 'ROMEO:\nFor I will with brothers, if the honour of my with here,\nAnd thou have pour might all persue,\nSome hear thou have'
+step  2500 | train 1.5590 | val 1.7299 | lr 5.79e-04 | 1807.6s
+  sample: 'ROMEO:\nDrother and to be a gentleman.\n\nMENIUS:\nA the dare Britther;\nUf not a bid thee the says affer merry stronge.\n\nKIN'
+step  2750 | train 1.5372 | val 1.7157 | lr 5.06e-04 | 1986.2s
+  sample: "ROMEO:\nClad's so for heart. The repasion in is warm the place?\n\nKING RICHARD II:\nGentleman:\nFor the leave the king, sir,"
+step  3000 | train 1.5192 | val 1.7039 | lr 4.34e-04 | 2220.5s
+  sample: 'ROMEO:\nYou see of offermonine, by and by.\n\nLADY BY:\nBut my heart, and now.\n\nBRUTUS:\nYou well, be be a four blood of thys'
+step  3250 | train 1.4985 | val 1.6818 | lr 3.64e-04 | 2472.9s
+  sample: "ROMEO:\nIf then, I she dombter of daughter death,\nAnd there's not own a obed be must the redementh.\n\nROMEO:\nI do do to wr"
+step  3500 | train 1.4860 | val 1.6716 | lr 3.00e-04 | 2729.2s
+  sample: 'ROMEO:\nMy lord, this heaven; therefore I am at in more,\nAs ninow, for no the say to had bear his both:\nAll that are whic'
+step  3750 | train 1.4754 | val 1.6702 | lr 2.42e-04 | 2982.0s
+  sample: 'ROMEO:\nYou were I do pisonted have on Sicin York\nAnd how of some, for since and the shall hope.\n\nKING RICHARD III:\nAnd t'
+step  4000 | train 1.4679 | val 1.6568 | lr 1.93e-04 | 3237.5s
+  sample: 'ROMEO:\nBrettter the to stand the feelf, thou before pition.\n\nNORTHUMBERLAND:\nCatchmand, but what you have more me much\nT'
+step  4250 | train 1.4590 | val 1.6525 | lr 1.53e-04 | 3492.2s
+  sample: 'ROMEO:\nWell.\n\nLEONTES:\nO, too should, be me has is grace thee your kind,\nWe coverset and the king despair your for your '
+step  4500 | train 1.4527 | val 1.6458 | lr 1.24e-04 | 3747.5s
+  sample: "ROMEO:\nUnless not but him. And Julian, let's earnest,\nPust father weep, and they thou depart'st the must\nOf blood all th"
+step  4750 | train 1.4481 | val 1.6425 | lr 1.06e-04 | 4000.4s
+  sample: 'ROMEO:\nGreat you are of Paul a passe as the words.\n\nHENRY BOLINGBROKE:\nBring they leave the speak a too heart. He may ne'
+step  5000 | train 1.4448 | val 1.6376 | lr 1.00e-04 | 4253.4s
+  sample: "ROMEO:\n'Tis one do, and the partice his breathe,\nAre out houses of the mock sour\nShall unought on this joys his redies:\n"
+{
+  "run_name": "tiny_gpt",
+  "params": 809984,
+  "final_train_loss": 1.4448,
+  "final_val_loss": 1.6376,
+  "val_perplexity": 5.143,
+  "train_time_s": 4254.6,
+  "tokens_per_s": 4814,
+  "peak_mem_mb": 528.7,
+  "mem_kind": "process_peak_rss",
+  "attn_scores_mb": 32.0,
+  "hardware": "CPU Intel64 Family 6 Model 142 Stepping 12, GenuineIntel (8 threads)"
+}
+checkpoint -> C:\Laiba\Uni\7th Sem\ai eng\transformer-gpt-assignment\checkpoints/tiny_gpt.pt
+ALL_DONE

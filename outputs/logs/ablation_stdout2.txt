@@ -1,0 +1,79 @@
+skip abl_base (already done)
+skip abl_depth2 (already done)
+skip abl_depth6 (already done)
+skip abl_heads2 (already done)
+skip abl_heads8 (already done)
+skip abl_ctx64 (already done)
+skip abl_ctx256 (already done)
+skip abl_pos_learned (already done)
+>> C:\Program Files\Python313\python.exe -m src.train --set run_name=abl_lr3e-4 checkpoint_path=checkpoints/abl_lr3e-4.pt batch_size=16 max_steps=1000 eval_interval=100 eval_iters=20 sample_tokens=200 warmup_steps=100 n_layers=4 n_heads=4 context_length=128 pos_encoding=sinusoidal lr=0.0003 min_lr=3e-05
+MiniGPT architecture
+  vocab_size      65
+  context_length  128
+  d_model         128
+  n_heads         4  (d_head = 32)
+  n_layers        4
+  ffn_dim         512
+  dropout         0.1
+  pos_encoding    sinusoidal
+
+  module                            params
+  tok_emb                            8,320
+  pos (learned only)                     0
+  blocks                           793,088
+    per block                      198,272
+  ln_f                                 256
+  lm_head                            8,320
+  TOTAL                            809,984  (0.81M)
+device=cpu  train_tokens=1,003,854  val_tokens=111,540
+step     0 | train 4.1810 | val 4.1808 | lr 3.00e-06 |    2.8s
+  sample: "ROMEO:oEVHcfqZKv?Fb,3Bd.Bo'SZ!B fLDG:Vtz,VqcGMZwmE,a-:g?\nmrESlchn!D:Pr3vQTMfLbxvh.;mA;\nnRnrjgVg$Ju:Kc?.x'OOFumSNlF.Gw.ie"
+step   100 | train 3.0097 | val 3.0475 | lr 3.00e-04 |   40.6s
+  sample: "ROMEO:f. \nYr oAnreola aen thd aN or n\nNotntTGsoinas 's\nStfotheha hohese Zthn\nwrb n sthe ysoiorot t xrdo hiepme esT b a?s"
+step   200 | train 2.5955 | val 2.5976 | lr 2.92e-04 |   84.2s
+  sample: 'ROMEO:\nAENun,\nNKUEWhar athesou urd \nT:\nWe t apeaagean t ZL.\nSRMoveatj se veler wathe houd t d t, vere cof e an wos, hid '
+step   300 | train 2.5222 | val 2.5199 | lr 2.68e-04 |  144.2s
+  sample: 'ROMEO:\nI:\nSor f bpolly aderimpk bend sengha I what d myed llll tareanse w I poiger ofe the thenisthn binetomy d mry ousa'
+step   400 | train 2.4751 | val 2.4668 | lr 2.32e-04 |  213.0s
+  sample: "ROMEO:\nSint d theais?\nY an ange's n yodeshat ne speyorsthere stherest nd mche eche st.\nSwerted acka lyoutheve thed t\nLUL"
+step   500 | train 2.4379 | val 2.4362 | lr 1.88e-04 |  308.7s
+  sample: 'ROMEO:\nMa achaisos her ws ouser torin nas sth worethe thor theld che, theatte ter the usth welfindane te afouns s asure '
+step   600 | train 2.4168 | val 2.4080 | lr 1.42e-04 |  421.8s
+  sample: "ROMEO:\nTind his e:\nPoind strated matheerso s mean ndspould u foustldurd pon sessrd urethakir d thath t's mery lofoul\nI a"
+step   700 | train 2.3954 | val 2.3948 | lr 9.75e-05 |  499.8s
+  sample: "ROMEO:\nFone lo outh vere yo.\n\nBE:\nTheanort, t sothe thom thagheat m ste thereathed ndatis:\nSipr s shillinth h hirst pe't"
+step   800 | train 2.3843 | val 2.3816 | lr 6.16e-05 |  578.9s
+  sample: "ROMEO:\nShan fperet orir y iloun f I'llind and; ir tid?\nHIOLLALING IKIONTG\nS:\nThache sthat y maran'as.\n\nOFRDUES:\nI tinour"
+step   900 | train 2.3788 | val 2.3764 | lr 3.81e-05 |  659.1s
+  sample: 'ROMEO:\nBacan frat, harcoue hen o min theand ar agho nteamicund\nY lith, id whof I torth thir thenoulin n s the s bo anfin'
+step  1000 | train 2.3733 | val 2.3690 | lr 3.00e-05 |  735.5s
+  sample: 'ROMEO:\nHou the then jore oussithe hes hele hireas\nONo s lof ceemave he on siris ar annkrd,\nAndo. INhe TES:\n\nSulisth mppl'
+{
+  "run_name": "abl_lr3e-4",
+  "params": 809984,
+  "final_train_loss": 2.3733,
+  "final_val_loss": 2.369,
+  "val_perplexity": 10.687,
+  "train_time_s": 739.6,
+  "tokens_per_s": 2769,
+  "peak_mem_mb": 425.4,
+  "mem_kind": "process_peak_rss",
+  "attn_scores_mb": 16.0,
+  "hardware": "CPU Intel64 Family 6 Model 142 Stepping 12, GenuineIntel (8 threads)"
+}
+checkpoint -> C:\Laiba\Uni\7th Sem\ai eng\transformer-gpt-assignment\checkpoints/abl_lr3e-4.pt
+| Experiment | Setting | Params | Train loss | Val loss | Val PPL | Train time (s) | Tokens/s | Peak RSS (MB) | Attn-score mem (MB) |
+|---|---|---|---|---|---|---|---|---|---|
+| Depth (n_layers) | n_layers=2 | 413,440 | 2.2056 | 2.2290 | 9.29 | 221 | 9,255 | 366 | 8.0 |
+| Depth (n_layers) | n_layers=4 | 809,984 | 2.1030 | 2.1327 | 8.44 | 448 | 4,574 | 423 | 16.0 |
+| Depth (n_layers) | n_layers=6 | 1,206,528 | 2.0597 | 2.1048 | 8.21 | 666 | 3,073 | 480 | 24.0 |
+| Heads (n_heads) | n_heads=2 | 809,984 | 2.1180 | 2.1485 | 8.57 | 422 | 4,848 | 422 | 8.0 |
+| Heads (n_heads) | n_heads=4 | 809,984 | 2.1030 | 2.1327 | 8.44 | 448 | 4,574 | 423 | 16.0 |
+| Heads (n_heads) | n_heads=8 | 809,984 | 2.1118 | 2.1430 | 8.53 | 466 | 4,398 | 453 | 32.0 |
+| Context length | context_length=64 | 809,984 | 2.0904 | 2.1070 | 8.22 | 209 | 4,892 | 376 | 4.0 |
+| Context length | context_length=128 | 809,984 | 2.1030 | 2.1327 | 8.44 | 448 | 4,574 | 423 | 16.0 |
+| Context length | context_length=256 | 809,984 | 2.1533 | 2.2073 | 9.09 | 828 | 4,948 | 626 | 64.0 |
+| Position method | pos_encoding=sinusoidal | 809,984 | 2.1030 | 2.1327 | 8.44 | 448 | 4,574 | 423 | 16.0 |
+| Position method | pos_encoding=learned | 826,368 | 2.2178 | 2.2358 | 9.35 | 402 | 5,092 | 421 | 16.0 |
+| Learning rate | lr=0.0003 | 809,984 | 2.3733 | 2.3690 | 10.69 | 740 | 2,769 | 425 | 16.0 |
+| Learning rate | lr=0.001 | 809,984 | 2.1030 | 2.1327 | 8.44 | 448 | 4,574 | 423 | 16.0 |

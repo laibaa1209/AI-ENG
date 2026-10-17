@@ -1,0 +1,14 @@
+# Render blueprint: New + > Blueprint > connect this repo. Free plan is enough (model is ~3 MB).
+services:
+  - type: web
+    name: minigpt-shakespeare
+    runtime: python
+    plan: free
+    buildCommand: pip install torch --index-url https://download.pytorch.org/whl/cpu && pip install -r requirements-api.txt
+    startCommand: uvicorn api.app:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: TORCH_THREADS
+        value: "1"

@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+.env
+
+# dataset is downloaded on first use (src/dataset.py)
+data/*.txt
+
+# only the final model is committed (~3 MB); ablation / scratch checkpoints are reproducible
+checkpoints/*.pt
+!checkpoints/tiny_gpt.pt
+report/report.html
